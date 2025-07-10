@@ -5,75 +5,736 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AC Maintenance in Brownsville, TX</title> 
-  <meta name="description" content="Reliable repair for your cooling system in the Rio Grande Valley.">
-  <style>
+  <meta name="description" content="Professional AC maintenance services in Brownsville, TX. Keep your air conditioning system running efficiently with expert maintenance and tune-ups.">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+      <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://ventrelay-03.vercel.app">
+    
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
-      background-color: #f9f9f9;
-      color: #222;
-      line-height: 1.7;
-    }
-    h1 {
-      color: #2a2a2a;
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    h2 {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
       color: #333;
-      font-size: 1.4rem;
-      margin-top: 2rem;
+      overflow-x: hidden;
     }
-    ul {
-      margin: 0.5rem 0 1.5rem 1.2rem;
-      padding-left: 1rem;
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
-    a {
-      color: #0066cc;
-      text-decoration: none;
+
+    /* Header */
+    header {
+      background: #334155;
+      color: white;
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;
       font-weight: 500;
+      color: #e5e7eb;
+      margin: 0;
     }
-    a:hover {
-      text-decoration: underline;
+
+            /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(51, 65, 85, 0.95), rgba(51, 65, 85, 0.95)), 
+                        linear-gradient(45deg, #334155, #B91C1C);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+
+
+
+    .hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
-    p {
-      margin-bottom: 1.2rem;
+
+    .hero .subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      opacity: 0.95;
     }
-    article {
-      background-color: #fff;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+
+            .hero .description {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-image-inline {
+            margin: 40px auto;
+            max-width: 500px;
+        }
+
+        .hero-image-inline img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+    .btn {
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: #B91C1C;
+      color: #FFFFFF;
+      box-shadow: 0 4px 15px rgba(185, 28, 28, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #991B1B;
+      box-shadow: 0 6px 20px rgba(185, 28, 28, 0.6);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: #334155;
+    }
+
+    /* Trust Indicators */
+    .trust-section {
+      background: white;
+      padding: 40px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .trust-indicators {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .trust-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .trust-item i {
+      font-size: 2.5rem;
+      color: #334155;
+    }
+
+    .trust-item h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .trust-item p {
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    /* Content Section */
+    .content-section {
+      padding: 80px 0;
+      background: white;
+    }
+
+    .content-section:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 15px;
+    }
+
+    .section-title p {
+      font-size: 1.1rem;
+      color: #6b7280;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .content-card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: left;
+      transition: all 0.3s ease;
+    }
+
+    .content-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .content-card h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .content-card i {
+      color: #B91C1C;
+      font-size: 1.5rem;
+    }
+
+    .content-card p {
+      color: #6b7280;
+      margin-bottom: 15px;
+    }
+
+    .content-card ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .content-card li {
+      color: #6b7280;
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .content-card li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #B91C1C;
+      font-weight: bold;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .feature-item {
+      text-align: center;
+    }
+
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      background: #334155;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .feature-icon i {
+      font-size: 2rem;
+      color: white;
+    }
+
+    .feature-item h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 15px;
+    }
+
+    .feature-item p {
+      color: #6b7280;
+    }
+
+    /* Emergency Section */
+    .emergency {
+      background: #B91C1C;
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .emergency h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .emergency p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .emergency-phone {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      padding: 20px 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .emergency-phone:hover {
+      background: #334155;
+      transform: scale(1.05);
+      border-color: white;
+    }
+
+    /* Footer */
+    footer {
+      background: #334155;
+      color: white;
+      padding: 60px 0 30px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .footer-section h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+    .footer-section p, .footer-section li {
+      color: #d1d5db;
+      margin-bottom: 10px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section a {
+      color: #d1d5db;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+      color: #fbbf24;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #475569;
+      margin-top: 40px;
+      padding-top: 20px;
+      text-align: center;
+      color: #9ca3af;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero .subtitle {
+        font-size: 1.2rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .emergency-phone {
+        font-size: 1.5rem;
+        padding: 15px 30px;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <article class="cloud-page">
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <h1>Professional AC Maintenance</h1>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <h1>AC Maintenance in Harlingen, TX</h1>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>AC Maintenance in Harlingen, TX</h1>
+      <p class="subtitle">Expert AC Maintenance Services</p>
+                  <p class="description">
+                Keep your air conditioning system running at peak performance with professional maintenance services. 
+                Regular maintenance prevents costly repairs and extends your AC system's lifespan.
+            </p>
+            <div class="hero-image-inline">
+                <img src="https://raw.githubusercontent.com/cooling-tx956/ventrelay-03/refs/heads/main/ac-maintenance-brownsville-tx.avif" 
+                     alt="Professional AC maintenance service in Harlingen, TX - Expert technician performing air conditioning maintenance" 
+                     loading="lazy">
+            </div>
+            <div class="cta-buttons">
+                <a href="https://jfr956.github.io/texas-lone-star-ac/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-tools"></i>
+                    Schedule Maintenance
+                </a>
+                <a href="#services" class="btn btn-secondary">
+                    <i class="fas fa-arrow-down"></i>
+                    Learn More
+                </a>
+            </div>
+    </div>
+      </section>
 
-    <h2>Your Local Solution for Reliable Comfort</h2>
-    <p>Reliable repair for your cooling system in the Rio Grande Valley.</p>
+    <!-- Trust Indicators -->
+    <section class="trust-section">
+    <div class="container">
+      <div class="trust-indicators">
+        <div class="trust-item">
+          <i class="fas fa-calendar-check"></i>
+          <h3>Regular Maintenance</h3>
+          <p>Scheduled service plans</p>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-user-graduate"></i>
+          <h3>Expert Technicians</h3>
+          <p>Certified professionals</p>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Warranty Protection</h3>
+          <p>Service guarantee</p>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-dollar-sign"></i>
+          <h3>Cost Savings</h3>
+          <p>Prevent expensive repairs</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <p>To learn more about availability or to get started, <a href="https://jfr956.github.io/texas-lone-star-ac/" target="_blank" rel="noopener noreferrer">view this service</a>.</p>
+  <!-- AC Maintenance Services -->
+  <section class="content-section" id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Comprehensive AC Maintenance Services</h2>
+        <p>Professional maintenance services to keep your air conditioning system running efficiently and reliably</p>
+      </div>
+      <div class="content-grid">
+        <div class="content-card">
+          <h3><i class="fas fa-clipboard-check"></i> Complete System Inspection</h3>
+          <p>Thorough inspection of all AC components to identify potential issues before they become costly problems.</p>
+          <ul>
+            <li>Refrigerant level check</li>
+            <li>Electrical connection inspection</li>
+            <li>Thermostat calibration</li>
+            <li>Safety control testing</li>
+            <li>Performance evaluation</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h3><i class="fas fa-filter"></i> Filter & Cleaning Service</h3>
+          <p>Professional cleaning and filter replacement to maintain optimal air quality and system efficiency.</p>
+          <ul>
+            <li>Air filter replacement</li>
+            <li>Coil cleaning service</li>
+            <li>Drain line clearing</li>
+            <li>Blower component cleaning</li>
+            <li>Condensate pan service</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h3><i class="fas fa-cogs"></i> System Optimization</h3>
+          <p>Fine-tuning your AC system for maximum efficiency, performance, and energy savings.</p>
+          <ul>
+            <li>System performance testing</li>
+            <li>Airflow optimization</li>
+            <li>Energy efficiency analysis</li>
+            <li>Component lubrication</li>
+            <li>System calibration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  </article>
+  <!-- Benefits of Regular AC Maintenance -->
+  <section class="content-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Benefits of Regular AC Maintenance</h2>
+        <p>Discover why professional AC maintenance is essential for your comfort and wallet</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-piggy-bank"></i>
+          </div>
+          <h3>Lower Energy Bills</h3>
+          <p>Regular maintenance keeps your AC running efficiently, reducing energy consumption and monthly utility costs.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-wrench"></i>
+          </div>
+          <h3>Prevent Costly Repairs</h3>
+          <p>Identify and address minor issues before they become major, expensive problems requiring emergency repairs.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Extend System Life</h3>
+          <p>Proper maintenance significantly extends your AC system's lifespan, maximizing your investment value.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3>Better Air Quality</h3>
+          <p>Clean filters and components improve indoor air quality, reducing allergens and pollutants in your home.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "AC Maintenance in Harlingen, TX",
-    "description": "Reliable repair for your cooling system in the Rio Grande Valley.",
-    "url": "https://jfr956.github.io/texas-lone-star-ac/",
-    "@id": "https://jfr956.github.io/texas-lone-star-ac/",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://jfr956.github.io/texas-lone-star-ac/"
-    }
-  }
-  </script>
+  <!-- Maintenance Plans -->
+  <section class="content-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>AC Maintenance Plans</h2>
+        <p>Choose the maintenance plan that best fits your needs and budget</p>
+      </div>
+      <div class="content-grid">
+        <div class="content-card">
+          <h3><i class="fas fa-calendar-alt"></i> Annual Maintenance</h3>
+          <p>Complete annual service to prepare your AC system for peak cooling season.</p>
+          <ul>
+            <li>Pre-season system inspection</li>
+            <li>Complete cleaning service</li>
+            <li>Filter replacement included</li>
+            <li>Performance optimization</li>
+            <li>Priority service scheduling</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h3><i class="fas fa-sync"></i> Bi-Annual Service</h3>
+          <p>Twice-yearly maintenance for optimal performance and maximum protection.</p>
+          <ul>
+            <li>Spring and fall service visits</li>
+            <li>Seasonal system preparation</li>
+            <li>Filter changes included</li>
+            <li>Comprehensive inspections</li>
+            <li>Discounted repair services</li>
+          </ul>
+        </div>
+        <div class="content-card">
+          <h3><i class="fas fa-shield-alt"></i> Premium Plan</h3>
+          <p>Complete maintenance coverage with additional benefits and priority support.</p>
+          <ul>
+            <li>Quarterly system check-ups</li>
+            <li>All filters and consumables included</li>
+            <li>24/7 emergency service</li>
+            <li>Extended warranty coverage</li>
+            <li>Energy efficiency reports</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect -->
+  <section class="content-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>What to Expect During Maintenance</h2>
+        <p>Our comprehensive maintenance process ensures your AC system receives thorough professional care</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <h3>1. System Inspection</h3>
+          <p>Comprehensive visual and diagnostic inspection of all AC components, connections, and performance metrics.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-spray-can"></i>
+          </div>
+          <h3>2. Cleaning & Service</h3>
+          <p>Professional cleaning of coils, filters, and components, plus lubrication of moving parts as needed.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-clipboard-list"></i>
+          </div>
+          <h3>3. Testing & Calibration</h3>
+          <p>System performance testing, thermostat calibration, and safety control verification for optimal operation.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <h3>4. Service Report</h3>
+          <p>Detailed maintenance report with recommendations, service history, and any issues identified for future attention.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency Section -->
+  <section class="emergency">
+    <div class="container">
+      <h2>Ready to Schedule AC Maintenance?</h2>
+      <p>Keep your air conditioning system running efficiently with professional maintenance services. Contact us to schedule your service today.</p>
+      <a href="https://jfr956.github.io/texas-lone-star-ac/" class="emergency-phone" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-tools"></i> Schedule Service
+      </a>
+      <p>Professional AC maintenance service available when you need it</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>AC Maintenance Services</h3>
+          <p>Professional air conditioning maintenance in Harlingen, TX with expert service and reliable results.</p>
+          <p><strong>Service Areas:</strong> Harlingen, Brownsville, San Benito, Los Fresnos, Port Isabel, Rio Grande Valley</p>
+        </div>
+        <div class="footer-section">
+          <h3>Maintenance Services</h3>
+          <ul>
+            <li>Annual AC Maintenance</li>
+            <li>Filter Replacement</li>
+            <li>Coil Cleaning</li>
+            <li>System Inspection</li>
+            <li>Performance Optimization</li>
+            <li>Preventive Maintenance Plans</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Why Choose Us</h3>
+          <p><strong>Licensed & Insured:</strong><br/>Certified HVAC professionals</p>
+          <p><strong>Quality Service:</strong><br/>Comprehensive maintenance guaranteed</p>
+          <p><strong>Maintenance Plans:</strong><br/>Affordable service packages</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Professional AC Maintenance Services. Licensed HVAC Contractor serving Harlingen, TX and surrounding areas.</p>
+      </div>
+    </div>
+  </footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "ac-installation-brownsville",
+  "name": "AC Maintenance in Harlingen, TX",
+  "description": "Professional AC maintenance services in Brownsville, TX. Affordable, fast, and reliable air conditioning installs for homes and businesses."
+}
+</script>
 </body>
 </html>
